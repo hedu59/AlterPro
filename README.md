@@ -32,17 +32,19 @@
 		Password: Secret@123
 	}
 
-	Fluxo:
-	{ 
-		Executar API Prototype, Criar Um Servidor, Ao criar servidor o processo irá disparar uma mensagem RabbitMQ para uma fila chamada: log_message
-	}
-
 	Dados de conexão RabbitMQ:
 	{
 		Host: http://localhost:15672
 		Username: guest
 		Password: guest
 	}
+	
+	Fluxo:
+	{ 
+		Executar API Prototype, Criar um novo servidor, Atualizar um servidor existente, ou deletar um servidor. 
+		Ao criar servidor o processo irá disparar uma mensagem RabbitMQ para uma fila chamada: log_message
+	}
 
 5 - Abrir aplicação MessageConsumerApi: Ao Executar a aplicação o consumer começará a consumir as mensagens produzidas
 	pela API prototype e irá salvar a mensagem como log de transação no mongo Db.
+
