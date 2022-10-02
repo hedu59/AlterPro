@@ -1,0 +1,13 @@
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\bin\Debug\netcoreapp3.1\MessageConsumer.Infra.deps.json
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\bin\Debug\netcoreapp3.1\MessageConsumer.Infra.dll
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\bin\Debug\netcoreapp3.1\MessageConsumer.Infra.pdb
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\bin\Debug\netcoreapp3.1\MessageConsumer.Domain.dll
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\bin\Debug\netcoreapp3.1\MessageConsumer.Domain.pdb
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.AssemblyInfo.cs
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.csproj.CopyComplete
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.dll
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.pdb

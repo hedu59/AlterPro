@@ -1,0 +1,309 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumerApi\\MessageConsumerApi.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj",
+        "projectName": "MessageConsumer.Application",
+        "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.17.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2-beta2, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj",
+        "projectName": "MessageConsumer.Domain",
+        "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.17.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj",
+        "projectName": "MessageConsumer.Infra",
+        "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.17.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumerApi\\MessageConsumerApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumerApi\\MessageConsumerApi.csproj",
+        "projectName": "MessageConsumerApi",
+        "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumerApi\\MessageConsumerApi.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumerApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.28, 3.1.28]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

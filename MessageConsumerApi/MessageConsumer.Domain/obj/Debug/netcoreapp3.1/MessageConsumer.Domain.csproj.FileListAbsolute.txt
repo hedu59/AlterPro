@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Domain\bin\Debug\netcoreapp3.1\MessageConsumer.Domain.deps.json
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Domain\bin\Debug\netcoreapp3.1\MessageConsumer.Domain.dll
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Domain\bin\Debug\netcoreapp3.1\MessageConsumer.Domain.pdb
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.AssemblyInfo.cs
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.dll
+C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.pdb

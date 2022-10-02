@@ -1,0 +1,6 @@
+*.cache
+*.v2
+*.vsidx
+*.dll
+*.lock
+*.v5

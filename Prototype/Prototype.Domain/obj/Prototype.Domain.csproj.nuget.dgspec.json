@@ -1,0 +1,214 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj": {}
+  },
+  "projects": {
+    "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj",
+        "projectName": "Prototype.Domain",
+        "projectPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj": {
+                "projectPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Flunt": {
+              "target": "Package",
+              "version": "[1.0.5, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Formatters.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.17.1, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.5, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj",
+        "projectName": "Prototype.Shared",
+        "projectPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Formatters.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.5, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
