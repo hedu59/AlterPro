@@ -2,9 +2,13 @@
 
 
 => Conexão com SQL Server
+
 => CQRS com MeddiatR
+
 => Microservices Menssageria com RabbitMQ
+
 => Registro de Log MongoDb
+
 => Docker Compose com criação de: SQL Server, MongoDb, RabbitMQ.
 
 ############################################################################################
