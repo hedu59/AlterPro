@@ -49,13 +49,19 @@
 	pela API prototype e irá salvar a mensagem como log de transação no mongo Db.
 
 
-**IMAGENS**
+############################################################################################
 ![Screenshot-7](https://github.com/hedu59/AlterPro/blob/main/7-FluxoDeTrabalho.png)
+############################################################################################
 ![Screenshot-1](https://github.com/hedu59/AlterPro/blob/main/1-DockerCompose.png)
+############################################################################################
 ![Screenshot-2](https://github.com/hedu59/AlterPro/blob/main/2-ImagensDocker.png)
+############################################################################################
 ![Screenshot-3](https://github.com/hedu59/AlterPro/blob/main/3-CriarServidor.png)
+############################################################################################
 ![Screenshot-4](https://github.com/hedu59/AlterPro/blob/main/4-MensagemCriada.png)
+############################################################################################
 ![Screenshot-5](https://github.com/hedu59/AlterPro/blob/main/5-CorpoDaMensagem.png)
+############################################################################################
 ![Screenshot-6](https://github.com/hedu59/AlterPro/blob/main/6-ConsumerAtivo.png)
 
 
