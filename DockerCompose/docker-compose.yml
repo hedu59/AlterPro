@@ -1,0 +1,36 @@
+version: "3.7"
+services:
+  mssql:
+    image: jeugenio/mssql-2017-express 
+    container_name: mssql-2017-express
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "Secret@123"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+
+  mongodb:
+     container_name: mongodb
+     image: mongo:latest
+     restart: unless-stopped
+     ports:
+      - 27017:27017
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: 'rabbitmq:3-management'
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 30s
+      timeout: 30s
+      retries: 3
+    volumes:
+      - './volumes/rabbitmq:/data'
+    restart: unless-stopped
+
+volumes:
+    db:     
