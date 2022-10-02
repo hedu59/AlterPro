@@ -3,7 +3,7 @@
 
 => Conexão com SQL Server
 
-=> CQRS com MeddiatR
+=> CQRS com MediatR
 
 => Microservices Menssageria com RabbitMQ
 
