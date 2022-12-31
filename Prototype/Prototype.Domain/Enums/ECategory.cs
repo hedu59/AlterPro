@@ -4,6 +4,10 @@ namespace Prototype.Domain.Enums
 {
     public enum  ECategory
     {
+
+        [Description("Undefined")]
+        undefined = 0,
+
         [Description("Painters")]
         painters = 1,
 

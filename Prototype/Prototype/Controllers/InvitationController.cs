@@ -46,5 +46,23 @@ namespace Prototype.Api.Controllers
             }
 
         }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Post([FromBody] UpdateInvitationCommand command)
+        {
+            try
+            {
+                var result = await _mediator.Send(command);
+
+                if (result.Success) return Ok(result);
+                return BadRequest(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
     }
 }
