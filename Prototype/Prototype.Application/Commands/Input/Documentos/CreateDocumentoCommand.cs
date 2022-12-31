@@ -9,7 +9,7 @@ namespace Prototype.Application.Commands.Input.Documentos
 {
     public class CreateDocumentoCommand : Notifiable, IRequest<ICommandResult>
     {
-        public Guid ServidorId { get; set; }
+        public long ServidorId { get; set; }
         public string FileName { get; set; }
         public string FileSize { get; set; }
         public string FileType { get; set; }
@@ -21,7 +21,7 @@ namespace Prototype.Application.Commands.Input.Documentos
         {
             AddNotifications(new Contract()
             .Requires()
-            .IsNotEmpty(ServidorId, "ServidorId", "O ServidorId não pode ser nulo")
+            .IsGreaterOrEqualsThan(ServidorId,1 ,"ServidorId", "O ServidorId não pode ser nulo")
             .IsNotNull(FileAsByteArray, "Arquivo", "O Arquivo não foi carregado")
 
              );

@@ -8,12 +8,11 @@ namespace Prototype.Shared.Entities
     {
         public Entity()
         {
-            Id = Guid.NewGuid();
             CreatedDate = DateTime.UtcNow;
             Active = true;
         }
 
-        public Guid Id { get; private set; }
+        public long Id { get; private set; }
         public DateTime CreatedDate { get; private set; }
         public bool Active { get; private set; }
 

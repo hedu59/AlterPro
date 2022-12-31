@@ -12,7 +12,7 @@ namespace Prototype.Domain.Entities
         {
 
         }
-        public Documento(Guid id, string name, string size, string type, DateTime date, string base64, byte[] fileByte, ECategoriaDocumento categoria)
+        public Documento(long id, string name, string size, string type, DateTime date, string base64, byte[] fileByte, ECategoriaDocumento categoria)
         {
             ServidorId = id;
             FileName = name;
@@ -25,7 +25,7 @@ namespace Prototype.Domain.Entities
         }
 
 
-        public Guid ServidorId { get; private set; }
+        public long ServidorId { get; private set; }
         public Servidor Servidor { get; private set; }
         public string FileName { get; private set; }
         public string FileSize { get; private set; }

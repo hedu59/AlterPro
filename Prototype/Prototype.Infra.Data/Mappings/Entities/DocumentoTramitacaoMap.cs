@@ -4,8 +4,6 @@ using Prototype.Domain.Entities;
 using Prototype.Infra.Data.Interfaces;
 using Prototype.Infra.Data.Mappings.Generics;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Prototype.Infra.Data.Mappings.Entities
 {
@@ -21,7 +19,6 @@ namespace Prototype.Infra.Data.Mappings.Entities
 
             builder.Property(x => x.DataTramitacao)
                 .HasColumnName("Data_Tramitacao")
-                .HasDefaultValue(DateTime.Now)
                 .IsRequired();
 
             builder.Property(x => x.SetorOrigem)

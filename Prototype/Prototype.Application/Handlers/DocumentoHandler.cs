@@ -103,7 +103,7 @@ namespace Prototype.Application.Handlers
             }
         }
 
-        public async Task<ICommandResult> Handle(Guid id)
+        public async Task<ICommandResult> Handle(long id)
         {
             try
             {

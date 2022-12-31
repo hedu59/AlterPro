@@ -10,9 +10,9 @@ namespace Prototype.Application.Interfaces
 
         Task<IPagedList<Documento>> ObterListDeDocumento(int pageIndex, int pageSize);
 
-        Task<IPagedList<Documento>> ObterListDeDocumentoPorServidor(Guid ServidorId, int pageIndex, int pageSize);
+        Task<IPagedList<Documento>> ObterListDeDocumentoPorServidor(long ServidorId, int pageIndex, int pageSize);
 
-        Task<Documento> ObterDocumentoPorID(Guid Id);
+        Task<Documento> ObterDocumentoPorID(long Id);
 
     }
 }

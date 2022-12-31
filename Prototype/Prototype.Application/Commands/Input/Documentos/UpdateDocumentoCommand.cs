@@ -9,16 +9,16 @@ namespace Prototype.Application.Commands.Input.Documentos
 {
     public class UpdateDocumentoCommand : Notifiable, IRequest<ICommandResult>
     {
-        public Guid ServidorId { get; set; }
-        public Guid DocumentoId { get; set; }
+        public long ServidorId { get; set; }
+        public long DocumentoId { get; set; }
         public ESetoresTramitacao Tramitacao { get; set; }
 
         public bool Validate()
         {
             AddNotifications(new Contract()
             .Requires()
-            .IsNotEmpty(ServidorId, "ServidorId", "O ServidorId não pode ser nulo")
-            .IsNotEmpty(DocumentoId, "DocumentoId", "O DocumentoId não pode ser nulo")
+            .IsGreaterOrEqualsThan(ServidorId,1, "ServidorId", "O ServidorId não pode ser nulo")
+            .IsGreaterOrEqualsThan(DocumentoId, 1,"DocumentoId", "O DocumentoId não pode ser nulo")
 
              );
             return Valid;

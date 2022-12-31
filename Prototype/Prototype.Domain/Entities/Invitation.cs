@@ -1,4 +1,5 @@
-﻿using Prototype.Domain.Enums;
+﻿using Microsoft.EntityFrameworkCore.Metadata;
+using Prototype.Domain.Enums;
 using Prototype.Domain.ValueObjects;
 using Prototype.Shared.Entities;
 using System;
@@ -9,10 +10,12 @@ namespace Prototype.Domain.Entities
 {
     public class Invitation: Entity
     {
+        private static decimal InitialPromotionalPrice() => 500;
+        private static decimal DiscountPercentage() => 10;
 
         protected Invitation() { }
 
-        public virtual Guid ContactId { get; private set; }
+        public virtual long ContactId { get; private set; }
         public Contact Contact { get; private set; }
         public Address Address { get; private set; }
         public Email Email { get; private set; }
@@ -32,9 +35,31 @@ namespace Prototype.Domain.Entities
             Status = status;
         }
 
+        public static Invitation Create(Contact contact, Address addess, Email email, ECategory category, decimal price, string description, bool? status)
+        =>new Invitation(contact, addess, email, category, price, description, status);
+
         public static Invitation Update(Contact contact, Address addess, Email email, ECategory category, decimal price, string description, bool? status)
         {
-            return new Invitation(contact, addess, email, category, price, description, status);
+            price = CalculateDiscount(price);
+            var invitation = new Invitation(contact, addess, email, category, price, description, status);
+       
+            return invitation;
+        }
+
+        public  void UpdateStatus(decimal price, bool status)
+        {
+            if (price > InitialPromotionalPrice() && status )
+                price = CalculateDiscount(price);
+
+            Status = status;
+            Price = price;
+        }
+
+        private static decimal CalculateDiscount(decimal price)
+        {
+            var adjustedPrice = price - (price / 100 * 10);
+
+            return adjustedPrice;
         }
     }
 }

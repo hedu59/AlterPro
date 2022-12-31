@@ -25,7 +25,7 @@ namespace Prototype.Api.Controllers
 
 
         [HttpGet()]
-        public IActionResult GetByServidorId(Guid servidorId, int pageIndex, int pageSize)
+        public IActionResult GetByServidorId(long servidorId, int pageIndex, int pageSize)
         {
             var documento = _service.ObterListDeDocumentoPorServidor(servidorId, pageIndex, pageSize);
 

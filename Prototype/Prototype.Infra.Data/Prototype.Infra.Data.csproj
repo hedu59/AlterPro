@@ -14,6 +14,28 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20221231175432_InitialMRV.cs" />
+    <Compile Remove="Migrations\20221231175432_InitialMRV.Designer.cs" />
+    <Compile Remove="Migrations\20221231180452_InitialMRV.cs" />
+    <Compile Remove="Migrations\20221231180452_InitialMRV.Designer.cs" />
+    <Compile Remove="Migrations\20221231181734_InitialMRV.cs" />
+    <Compile Remove="Migrations\20221231181734_InitialMRV.Designer.cs" />
+    <Compile Remove="Migrations\20221231184545_InitialMRV.cs" />
+    <Compile Remove="Migrations\20221231184545_InitialMRV.Designer.cs" />
+    <Compile Remove="Migrations\20221231185749_Seed.cs" />
+    <Compile Remove="Migrations\20221231185749_Seed.Designer.cs" />
+    <Compile Remove="Migrations\20221231185839_SeedContacts.cs" />
+    <Compile Remove="Migrations\20221231185839_SeedContacts.Designer.cs" />
+    <Compile Remove="Migrations\20221231190216_Seed2.cs" />
+    <Compile Remove="Migrations\20221231190216_Seed2.Designer.cs" />
+    <Compile Remove="Migrations\20221231190238_Seed22.cs" />
+    <Compile Remove="Migrations\20221231190238_Seed22.Designer.cs" />
+    <Compile Remove="Migrations\20221231190344_Seed.cs" />
+    <Compile Remove="Migrations\20221231190344_Seed.Designer.cs" />
+  </ItemGroup>
+	
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.29" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.29" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.29" />
@@ -27,6 +49,21 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Prototype.Domain\Prototype.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="SeedDataBase.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SeedDataBase.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="SeedDataBase.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SeedDataBase.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

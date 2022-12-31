@@ -39,7 +39,7 @@ namespace Prototype.Application.Services
 
         }
 
-        public async Task<IPagedList<Documento>> ObterListDeDocumentoPorServidor(Guid ServidorId, int pageIndex, int pageSize)
+        public async Task<IPagedList<Documento>> ObterListDeDocumentoPorServidor(long ServidorId, int pageIndex, int pageSize)
         {
             try
             {
@@ -59,7 +59,7 @@ namespace Prototype.Application.Services
             }
         }
 
-        public async Task<Documento> ObterDocumentoPorID(Guid Id)
+        public async Task<Documento> ObterDocumentoPorID(long Id)
         {
             var documento = await _uow.GetRepository<Documento>().GetFirstOrDefaultAsync(
                  predicate: x => x.Id == Id && x.Active,

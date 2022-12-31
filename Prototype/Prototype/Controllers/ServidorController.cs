@@ -28,7 +28,7 @@ namespace Prototype.Api.Controllers
          => Ok(_servidorService.ObterServidores(pageIndex ?? 1, pageSize ?? 10));
         
         [HttpGet("{Id}")]
-        public IActionResult GetById(Guid Id)
+        public IActionResult GetById(long Id)
         => Ok( _servidorService.ObterTramitacoesPorID(Id));
 
         [HttpPost]

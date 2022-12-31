@@ -1,10 +1,12 @@
 ﻿using Prototype.Shared.Entities;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Prototype.Domain.Entities
 {
     public class Contact : Entity
     {
+        [NotMapped]
         public virtual string FirstName { get; private set; }
         public string FullName { get; private set; }
         public string PhoneNumber { get; private set; }

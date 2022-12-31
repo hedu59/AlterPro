@@ -8,7 +8,7 @@ namespace Prototype.Application.Commands.Input.Invitation
 {
     public class UpdateInvitationCommand: Notifiable, IRequest<ICommandResult>
     {
-        public Guid InvitationId { get; set; }
+        public long InvitationId { get; set; }
         public bool Status { get; set; }
         public bool Validate()
         {

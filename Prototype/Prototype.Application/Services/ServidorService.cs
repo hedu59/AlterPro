@@ -30,7 +30,7 @@ namespace Prototype.Application.Services
             return servidores;
         }
 
-        public async Task<Servidor> ObterTramitacoesPorID(Guid Id)
+        public async Task<Servidor> ObterTramitacoesPorID(long Id)
         {
             
             var servidor = await _uow.GetRepository<Servidor>().GetFirstOrDefaultAsync(

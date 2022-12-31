@@ -29,6 +29,7 @@ namespace Prototype.Api.DependencyInjection
 
         static void ServicesDependencies(IServiceCollection services)
         {
+            services.AddScoped<IInvitationService, InvitationService>();
             services.AddScoped<IServidorService, ServidorService>();
             services.AddScoped<IDocumentoService, DocumentoService>();
             services.AddScoped<IUnitOfWork, UnitOfWork<PrototypeDataContext>>();
@@ -40,6 +41,7 @@ namespace Prototype.Api.DependencyInjection
             services.AddScoped<ServidorHandler, ServidorHandler>();
             services.AddScoped<DocumentoHandler, DocumentoHandler>();
             services.AddScoped<UserHandler, UserHandler>();
+            services.AddScoped<InvitationHandler, InvitationHandler>();
         }
     }
 

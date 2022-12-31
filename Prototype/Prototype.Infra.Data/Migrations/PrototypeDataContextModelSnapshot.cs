@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Prototype.Infra.Data;
 
 namespace Prototype.Infra.Data.Migrations
@@ -19,11 +20,42 @@ namespace Prototype.Infra.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Prototype.Domain.Entities.Contact", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Contacts");
+                });
+
             modelBuilder.Entity("Prototype.Domain.Entities.Documento", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
@@ -35,6 +67,9 @@ namespace Prototype.Infra.Data.Migrations
                     b.Property<string>("CategoriaDescicao")
                         .HasColumnName("CategoriaDescicao")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("FileAsBase64")
                         .IsRequired()
@@ -65,19 +100,14 @@ namespace Prototype.Infra.Data.Migrations
                         .HasDefaultValue("application/pdf");
 
                     b.Property<DateTime>("LastModifiedDate")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("Ultima_Modificacao")
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 10, 1, 16, 33, 33, 516, DateTimeKind.Local).AddTicks(4910));
-
-                    b.Property<DateTime>("RegisterDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("ServidorId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<long>("ServidorId")
+                        .HasColumnType("bigint");
 
-                    b.Property<Guid?>("ServidorId1")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<long?>("ServidorId1")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
@@ -88,29 +118,69 @@ namespace Prototype.Infra.Data.Migrations
                     b.ToTable("Documentos");
                 });
 
-            modelBuilder.Entity("Prototype.Domain.Entities.ProcessoTramitacao", b =>
+            modelBuilder.Entity("Prototype.Domain.Entities.Invitation", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("DataTramitacao")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("Data_Tramitacao")
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 10, 1, 16, 33, 33, 530, DateTimeKind.Local).AddTicks(2501));
+                    b.Property<int>("Category")
+                        .HasColumnType("int");
 
-                    b.Property<Guid?>("DocumentoId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<long>("ContactId")
+                        .HasColumnType("bigint");
 
-                    b.Property<DateTime>("RegisterDate")
+                    b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("ServidorId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("numeric(10,2)");
+
+                    b.Property<bool?>("Status")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(null);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ContactId");
+
+                    b.ToTable("Invitations");
+                });
+
+            modelBuilder.Entity("Prototype.Domain.Entities.ProcessoTramitacao", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DataTramitacao")
+                        .HasColumnName("Data_Tramitacao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("DocumentoId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("ServidorId")
+                        .HasColumnType("bigint");
 
                     b.Property<int>("SetorDestino")
                         .HasColumnName("Setor_Destino")
@@ -145,9 +215,11 @@ namespace Prototype.Infra.Data.Migrations
 
             modelBuilder.Entity("Prototype.Domain.Entities.Servidor", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
@@ -157,6 +229,9 @@ namespace Prototype.Infra.Data.Migrations
                         .HasColumnName("CPF")
                         .HasColumnType("nvarchar(11)")
                         .HasMaxLength(11);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Matricula")
                         .IsRequired()
@@ -176,9 +251,6 @@ namespace Prototype.Infra.Data.Migrations
                         .HasColumnType("nvarchar(80)")
                         .HasMaxLength(80);
 
-                    b.Property<DateTime>("RegisterDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("SetorDescricao")
                         .HasColumnName("SetorDescricao")
                         .HasColumnType("nvarchar(max)");
@@ -194,12 +266,17 @@ namespace Prototype.Infra.Data.Migrations
 
             modelBuilder.Entity("Prototype.Domain.Entities.User", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -225,9 +302,6 @@ namespace Prototype.Infra.Data.Migrations
                         .HasMaxLength(15)
                         .HasDefaultValue("123456");
 
-                    b.Property<DateTime>("RegisterDate")
-                        .HasColumnType("datetime2");
-
                     b.HasKey("Id");
 
                     b.ToTable("Users");
@@ -244,6 +318,92 @@ namespace Prototype.Infra.Data.Migrations
                     b.HasOne("Prototype.Domain.Entities.Servidor", null)
                         .WithMany("Documentos")
                         .HasForeignKey("ServidorId1");
+                });
+
+            modelBuilder.Entity("Prototype.Domain.Entities.Invitation", b =>
+                {
+                    b.HasOne("Prototype.Domain.Entities.Contact", "Contact")
+                        .WithMany()
+                        .HasForeignKey("ContactId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.OwnsOne("Prototype.Domain.Entities.Address", "Address", b1 =>
+                        {
+                            b1.Property<long>("InvitationId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("bigint")
+                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                            b1.Property<string>("City")
+                                .IsRequired()
+                                .HasColumnName("City")
+                                .HasColumnType("nvarchar(100)")
+                                .HasMaxLength(100);
+
+                            b1.Property<string>("Complement")
+                                .HasColumnName("Complement")
+                                .HasColumnType("nvarchar(100)")
+                                .HasMaxLength(100);
+
+                            b1.Property<string>("Neighborhood")
+                                .IsRequired()
+                                .HasColumnName("Neighborhood")
+                                .HasColumnType("nvarchar(250)")
+                                .HasMaxLength(250);
+
+                            b1.Property<string>("Number")
+                                .IsRequired()
+                                .HasColumnName("Number")
+                                .HasColumnType("nvarchar(20)")
+                                .HasMaxLength(20);
+
+                            b1.Property<string>("PostalCode")
+                                .IsRequired()
+                                .HasColumnName("PostalCode")
+                                .HasColumnType("nvarchar(16)")
+                                .HasMaxLength(16);
+
+                            b1.Property<string>("State")
+                                .IsRequired()
+                                .HasColumnName("State")
+                                .HasColumnType("nvarchar(80)")
+                                .HasMaxLength(80);
+
+                            b1.Property<string>("Street")
+                                .IsRequired()
+                                .HasColumnName("Street")
+                                .HasColumnType("nvarchar(250)")
+                                .HasMaxLength(250);
+
+                            b1.HasKey("InvitationId");
+
+                            b1.ToTable("Invitations");
+
+                            b1.WithOwner()
+                                .HasForeignKey("InvitationId");
+                        });
+
+                    b.OwnsOne("Prototype.Domain.ValueObjects.Email", "Email", b1 =>
+                        {
+                            b1.Property<long>("InvitationId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("bigint")
+                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                            b1.Property<string>("Valor")
+                                .IsRequired()
+                                .HasColumnName("Email")
+                                .HasColumnType("nvarchar(100)")
+                                .HasMaxLength(100);
+
+                            b1.HasKey("InvitationId");
+
+                            b1.ToTable("Invitations");
+
+                            b1.WithOwner()
+                                .HasForeignKey("InvitationId");
+                        });
                 });
 
             modelBuilder.Entity("Prototype.Domain.Entities.ProcessoTramitacao", b =>

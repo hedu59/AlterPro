@@ -28,6 +28,7 @@ namespace Prototype.Infra.Data.Mappings.Entities
                 address.WithOwner();
                 address.Property(x => x.Number).HasColumnName("Number").HasMaxLength(20).IsRequired();
                 address.Property(x => x.Complement).HasColumnName("Complement").HasMaxLength(100);
+                address.Property(x => x.Street).HasColumnName("Street").HasMaxLength(250).IsRequired();
                 address.Property(x => x.Neighborhood).HasColumnName("Neighborhood").HasMaxLength(250).IsRequired();
                 address.Property(x => x.City).HasColumnName("City").HasMaxLength(100).IsRequired();
                 address.Property(x => x.State).HasColumnName("State").HasMaxLength(80).IsRequired();

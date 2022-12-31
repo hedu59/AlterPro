@@ -8,7 +8,7 @@ namespace Prototype.Application.Commands.Input.Servidores
 {
     public class DeleteServidorCommand : Notifiable, IRequest<ICommandResult>
     {
-        public Guid ServidorId { get; set; }
+        public long ServidorId { get; set; }
 
         public bool Validate()
         {

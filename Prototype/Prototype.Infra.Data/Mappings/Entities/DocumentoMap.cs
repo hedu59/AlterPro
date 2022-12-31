@@ -31,7 +31,6 @@ namespace Prototype.Infra.Data.Mappings.Entities
 
             builder.Property(x => x.LastModifiedDate)
                 .HasColumnName("Ultima_Modificacao")
-                .HasDefaultValue(DateTime.Now)
                 .IsRequired();
 
             builder.Property(x => x.FileSize)

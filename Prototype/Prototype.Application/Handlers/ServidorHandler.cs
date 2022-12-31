@@ -140,9 +140,9 @@ namespace Prototype.Application.Handlers
             }
 
         }
-        private async Task CriarLog(Guid servidorId, string obsevacao)
+        private async Task CriarLog(long servidorId, string obsevacao)
         {
-            var log = new LogTransacao() { Observacao = obsevacao, ServidorId = servidorId };
+            var log = new LogTransacao() { Observacao = obsevacao, ServidorId = Guid.NewGuid() };
             _logTransacao.ProduzirTransacao(log);
           
         }

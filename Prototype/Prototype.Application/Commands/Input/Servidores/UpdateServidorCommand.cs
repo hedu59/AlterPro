@@ -11,7 +11,7 @@ namespace Prototype.Application.Commands.Input.Servidores
 {
     public class UpdateServidorCommand : Notifiable, IRequest<ICommandResult>
     {
-        public Guid ServidorId { get; set; }
+        public long ServidorId { get; set; }
 
         public ESetoresTramitacao Tramitacao { get; set; }
 

@@ -1,6 +1,7 @@
 ﻿
 
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Prototype.Domain.Entities;
@@ -16,8 +17,7 @@ namespace Prototype.Infra.Data
 
         public PrototypeDataContext(DbContextOptions<PrototypeDataContext> options, IConfiguration configuration) : base(options)
         {
-            //Database.AutoTransactionsEnabled = false;
-            Configuration = configuration;
+            Configuration = configuration;             
         }
 
 
@@ -25,6 +25,8 @@ namespace Prototype.Infra.Data
         public DbSet<Documento> Documentos { get; set; }
         public DbSet<ProcessoTramitacao> Tramitacao { get; set; }
         public DbSet<Servidor> BeneficioServidores { get; set; }
+        public DbSet<Invitation> Invitites { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

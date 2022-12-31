@@ -1,7 +1,5 @@
 ﻿using Prototype.Domain.ValueObjects;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Prototype.Domain.Entities
 {
@@ -13,6 +11,8 @@ namespace Prototype.Domain.Entities
         public string Complement { get; private set; }
 
         public string Neighborhood { get; private set; }
+
+        public string Street { get; private set; }
 
         public string City { get; private set; }
 
@@ -27,6 +27,7 @@ namespace Prototype.Domain.Entities
         private Address(
 
             string number,
+            string street,
             string complement,
             string neighborhood,
             string city,
@@ -34,6 +35,7 @@ namespace Prototype.Domain.Entities
             string postalCode)
         {
             Number = number;
+            Street = street;
             Complement = complement;
             Neighborhood = neighborhood;
             City = city;
@@ -44,6 +46,7 @@ namespace Prototype.Domain.Entities
         protected override IEnumerable<object> GetEqualityComponents()
         {
             yield return Number;
+            yield return Street;
             yield return Complement;
             yield return Neighborhood;
             yield return City;
@@ -53,6 +56,7 @@ namespace Prototype.Domain.Entities
 
         public static Address Create(
             string number,
+            string street,
             string complement,
             string neighborhood,
             string city,
@@ -60,7 +64,7 @@ namespace Prototype.Domain.Entities
             string postalCode
             )
         {
-            return new Address(number, complement, neighborhood, city, state, postalCode);
+            return new Address(number,street, complement, neighborhood, city, state, postalCode);
         }
     }
 }

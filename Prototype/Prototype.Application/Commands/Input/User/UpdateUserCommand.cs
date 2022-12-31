@@ -8,7 +8,7 @@ namespace Prototype.Application.Commands.Input.User
 {
     public class UpdateUserCommand : Notifiable, IRequest<ICommandResult>
     {
-        public Guid UserId { get; set; }
+        public long UserId { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
@@ -29,7 +29,7 @@ namespace Prototype.Application.Commands.Input.User
                 .HasMinLen(Password, 6, "Senha", "A senha deve ter pelo menos 6 carateres")
                 .HasMaxLen(Password, 15, "Senha", "A senha não poder ter mais 15 carateres")
 
-                .IsNotEmpty(UserId, "UserId", "Informe o Id do usuário")
+                .IsGreaterOrEqualsThan(UserId,1, "UserId", "Informe o Id do usuário")
 
             );
            return Valid;
