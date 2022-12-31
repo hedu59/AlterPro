@@ -15,12 +15,10 @@ namespace Prototype.Api.Controllers
     {
         private readonly IMediator _mediator;
         private readonly IServidorService _servidorService;
-        private readonly IUnitOfWork _uow;
 
-        public ServidorController(IServidorService servidor, IUnitOfWork uow, IMediator mediator)
+        public ServidorController(IServidorService servidor, IMediator mediator)
         {
             _servidorService = servidor;
-            _uow = uow;
             _mediator = mediator;
         }
 

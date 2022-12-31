@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Prototype.Application.Commands.Input.User;
 using Prototype.Application.Interfaces;
 using System;
+using System.Threading.Tasks;
 
 namespace Prototype.Api.Controllers
 {
@@ -15,10 +17,11 @@ namespace Prototype.Api.Controllers
     {
 
         private readonly IUserService _userService;
-
-        public UserController(IUserService userService)
+        private readonly IMediator _mediator;
+        public UserController(IUserService userService, IMediator mediator )
         {
             _userService = userService;
+            _mediator = mediator;
         }
 
     
@@ -32,12 +35,11 @@ namespace Prototype.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] CreateUserCommand command)
+        public async Task<IActionResult> Create([FromBody] CreateUserCommand command)
         {
-
             try
             {
-                var result = _userService.CreateUser(command);
+                var result = await _mediator.Send(command);
 
                 if (result.Success) return Ok(result);
                 return BadRequest(result);
@@ -49,11 +51,11 @@ namespace Prototype.Api.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put([FromBody] UpdateUserCommand command)
+        public async Task<IActionResult> Put([FromBody] UpdateUserCommand command)
         {
             try
             {
-                var result = _userService.UpdateUser(command);
+                var result = await _mediator.Send(command);
 
                 if (result.Success) return Ok(result);
                 return BadRequest(result);
@@ -63,22 +65,6 @@ namespace Prototype.Api.Controllers
                 return BadRequest(ex.Message);
             }
 
-        }
-
-        [HttpDelete("{id}")]
-        public IActionResult Delete(Guid id)
-        {
-            try
-            {
-                var result = _userService.DeleteBarber(id);
-
-                if (result.Success) return Ok(result);
-                return BadRequest(result);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
         }
     }
 }

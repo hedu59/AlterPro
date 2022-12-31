@@ -8843,11 +8843,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj",
+      "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj",
       "projectName": "Prototype.Domain",
-      "projectPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj",
+      "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Domain\\obj\\",
+      "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8868,8 +8868,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj": {
-              "projectPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj"
+            "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj": {
+              "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj"
             }
           }
         }

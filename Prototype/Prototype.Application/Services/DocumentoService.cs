@@ -4,6 +4,7 @@ using Prototype.Domain.Enums;
 using Prototype.Domain.Interfaces.IUnitOfWork;
 using Prototype.Domain.Interfaces.IUnitOfWork.Collections;
 using System;
+using System.Threading.Tasks;
 
 namespace Prototype.Application.Services
 {
@@ -17,12 +18,12 @@ namespace Prototype.Application.Services
             _uow = uow;
         }
 
-        public IPagedList<Documento> ObterListDeDocumento(int pageIndex, int pageSize)
+        public async Task<IPagedList<Documento>> ObterListDeDocumento(int pageIndex, int pageSize)
         {
             try
             {
-                var documentos = _uow.GetRepository<Documento>()
-                                     .GetPagedList(predicate: x => x.Active == true, 
+                var documentos = await _uow.GetRepository<Documento>()
+                                     .GetPagedListAsync(predicate: x => x.Active == true, 
                                      disableTracking: true, 
                                      pageIndex: pageIndex, 
                                      pageSize: pageSize);
@@ -38,11 +39,11 @@ namespace Prototype.Application.Services
 
         }
 
-        public IPagedList<Documento> ObterListDeDocumentoPorServidor(Guid ServidorId, int pageIndex, int pageSize)
+        public async Task<IPagedList<Documento>> ObterListDeDocumentoPorServidor(Guid ServidorId, int pageIndex, int pageSize)
         {
             try
             {
-                var documentos = _uow.GetRepository<Documento>().GetPagedList(
+                var documentos = await _uow.GetRepository<Documento>().GetPagedListAsync(
                    predicate: x => x.ServidorId == ServidorId &&
                    x.Active == true,
                    disableTracking: true,
@@ -58,9 +59,9 @@ namespace Prototype.Application.Services
             }
         }
 
-        public Documento ObterDocumentoPorID(Guid Id)
+        public async Task<Documento> ObterDocumentoPorID(Guid Id)
         {
-            var documento = _uow.GetRepository<Documento>().GetFirstOrDefault(
+            var documento = await _uow.GetRepository<Documento>().GetFirstOrDefaultAsync(
                  predicate: x => x.Id == Id && x.Active,
                  disableTracking: true);
 

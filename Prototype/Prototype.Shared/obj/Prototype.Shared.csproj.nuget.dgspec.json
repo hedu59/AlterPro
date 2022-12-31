@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj": {}
+    "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj": {
+    "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj",
+        "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj",
         "projectName": "Prototype.Shared",
-        "projectPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj",
+        "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Shared\\obj\\",
+        "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

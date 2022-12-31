@@ -6,7 +6,7 @@ using System;
 
 namespace Prototype.Application.Commands.Input.User
 {
-    public class UpdateUserCommand : Notifiable, ICommand, IRequest<string>
+    public class UpdateUserCommand : Notifiable, IRequest<ICommandResult>
     {
         public Guid UserId { get; set; }
         public string Login { get; set; }

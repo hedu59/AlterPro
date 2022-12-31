@@ -5,7 +5,7 @@ using Prototype.Shared.Commands;
 
 namespace Prototype.Application.Commands.Input.User
 {
-    public class CreateUserCommand : Notifiable, ICommand, IRequest<string>
+    public class CreateUserCommand : Notifiable, IRequest<ICommandResult>
     {
         public string Login { get; set; }
         public string Password { get; set; }

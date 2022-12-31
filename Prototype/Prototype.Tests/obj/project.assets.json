@@ -10178,11 +10178,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Tests\\Prototype.Tests.csproj",
+      "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Tests\\Prototype.Tests.csproj",
       "projectName": "Prototype.Tests",
-      "projectPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Tests\\Prototype.Tests.csproj",
+      "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Tests\\Prototype.Tests.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Tests\\obj\\",
+      "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

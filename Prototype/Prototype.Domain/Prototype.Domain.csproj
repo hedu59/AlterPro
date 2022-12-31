@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\Repositories\CustomRepositories\" />
-    <Folder Include="ValueObjects\" />
   </ItemGroup>
 
   <ItemGroup>

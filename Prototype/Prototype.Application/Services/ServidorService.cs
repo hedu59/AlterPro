@@ -7,6 +7,7 @@ using Prototype.Domain.Interfaces.IUnitOfWork.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Prototype.Application.Services
 {
@@ -20,26 +21,26 @@ namespace Prototype.Application.Services
             _uow = uow;
         }
 
-        public IPagedList<Servidor> ObterServidores(int pageIndex, int pageSize)
+        public async Task<IPagedList<Servidor>> ObterServidores(int pageIndex, int pageSize)
         {
-            var servidores =  _uow.GetRepository<Servidor>()
-                .GetPagedList(predicate: x => x.Active == true,  pageIndex: pageIndex, pageSize: pageSize,
+            var servidores =  await _uow.GetRepository<Servidor>()
+                .GetPagedListAsync(predicate: x => x.Active == true,  pageIndex: pageIndex, pageSize: pageSize,
                 include: x => x.Include(y => y.Documentos));
 
             return servidores;
         }
 
-        public Servidor ObterTramitacoesPorID(Guid Id)
+        public async Task<Servidor> ObterTramitacoesPorID(Guid Id)
         {
             
-            var servidor = _uow.GetRepository<Servidor>().GetFirstOrDefault(
+            var servidor = await _uow.GetRepository<Servidor>().GetFirstOrDefaultAsync(
                predicate: x => x.Id == Id && x.Active,
                disableTracking: true);
 
-            var tramitacao = _uow.GetRepository<ProcessoTramitacao>()
-                                .Get(predicate: x => x.ServidorId == Id && x.Active, disableTracking: true).ToList();
+            var tramitacao = await _uow.GetRepository<ProcessoTramitacao>()
+                                .GetAsync(predicate: x => x.ServidorId == Id && x.Active, disableTracking: true);
 
-            tramitacao = ConverterSetores(tramitacao);
+            tramitacao = ConverterSetores(tramitacao.ToList()).AsQueryable();
             servidor.SetorDescricao = tramitacao.LastOrDefault().SetorDestinoDescricao;
             servidor.SetorTramitacao = tramitacao.LastOrDefault().SetorDestino;
 
@@ -47,8 +48,6 @@ namespace Prototype.Application.Services
 
             return servidor;
         }
-
-
 
         private List<ProcessoTramitacao> ConverterSetores(List<ProcessoTramitacao> tramitacao)
         {

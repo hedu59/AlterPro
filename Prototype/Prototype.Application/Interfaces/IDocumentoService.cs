@@ -1,17 +1,18 @@
 ﻿using Prototype.Domain.Entities;
 using Prototype.Domain.Interfaces.IUnitOfWork.Collections;
 using System;
+using System.Threading.Tasks;
 
 namespace Prototype.Application.Interfaces
 {
     public interface IDocumentoService
     {
-      
-        IPagedList<Documento> ObterListDeDocumento(int pageIndex, int pageSize);
 
-        IPagedList<Documento> ObterListDeDocumentoPorServidor(Guid ServidorId, int pageIndex, int pageSize);
+        Task<IPagedList<Documento>> ObterListDeDocumento(int pageIndex, int pageSize);
 
-        Documento ObterDocumentoPorID(Guid Id);
+        Task<IPagedList<Documento>> ObterListDeDocumentoPorServidor(Guid ServidorId, int pageIndex, int pageSize);
+
+        Task<Documento> ObterDocumentoPorID(Guid Id);
 
     }
 }

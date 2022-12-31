@@ -10874,11 +10874,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype\\Prototype.Api.csproj",
+      "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype\\Prototype.Api.csproj",
       "projectName": "Prototype.Api",
-      "projectPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype\\Prototype.Api.csproj",
+      "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype\\Prototype.Api.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype\\obj\\",
+      "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -10899,11 +10899,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Application\\Prototype.Application.csproj": {
-              "projectPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Application\\Prototype.Application.csproj"
+            "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Application\\Prototype.Application.csproj": {
+              "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Application\\Prototype.Application.csproj"
             },
-            "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj": {
-              "projectPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj"
+            "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj": {
+              "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj"
             }
           }
         }

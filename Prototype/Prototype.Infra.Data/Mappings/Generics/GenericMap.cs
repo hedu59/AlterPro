@@ -14,8 +14,9 @@ namespace Prototype.Infra.Data.Mappings.Generics
             builder.ToTable(tableName);
             builder.HasKey(x => x.Id);
 
+            builder.Property(x=> x.Id).UseIdentityByDefaultColumn();
             builder.Property(x => x.Active);
-            builder.Property(x => x.RegisterDate)
+            builder.Property(x => x.CreatedDate)
                 .IsRequired();
         }
     }

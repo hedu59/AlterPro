@@ -9,12 +9,12 @@ namespace Prototype.Shared.Entities
         public Entity()
         {
             Id = Guid.NewGuid();
-            RegisterDate = DateTime.UtcNow;
+            CreatedDate = DateTime.UtcNow;
             Active = true;
         }
 
         public Guid Id { get; private set; }
-        public DateTime RegisterDate { get; private set; }
+        public DateTime CreatedDate { get; private set; }
         public bool Active { get; private set; }
 
         public void Disable()

@@ -37,7 +37,7 @@ namespace Prototype.Application.Handlers
 
                 var servidor = _uow
                    .GetRepository<Servidor>()
-                   .GetFirstOrDefault(predicate: x => x.Id == command.ServidorId);
+                   .GetFirstOrDefaultAsync(predicate: x => x.Id == command.ServidorId);
 
                 if (servidor != null)
                 {
@@ -76,16 +76,16 @@ namespace Prototype.Application.Handlers
                 if (!command.Valid)
                     return await Task.FromResult(new CommandResult(success: false, message: null, data: command.Notifications));
 
-                var servidor = _uow
+                var servidor = await _uow
                     .GetRepository<Servidor>()
-                    .GetFirstOrDefault(predicate: x => x.Id == command.ServidorId);
+                    .GetFirstOrDefaultAsync(predicate: x => x.Id == command.ServidorId);
 
                 if (servidor != null)
                 {
 
-                    var documento = _uow
+                    var documento = await _uow
                         .GetRepository<Documento>()
-                        .GetFirstOrDefault(predicate: x => x.Id == command.DocumentoId);
+                        .GetFirstOrDefaultAsync(predicate: x => x.Id == command.DocumentoId);
 
                     documento.UpdateDocumento(DateTime.Now);
 
@@ -103,11 +103,11 @@ namespace Prototype.Application.Handlers
             }
         }
 
-        public ICommandResult Handle(Guid id)
+        public async Task<ICommandResult> Handle(Guid id)
         {
             try
             {
-                var user = _uow.GetRepository<User>().GetFirstOrDefault(predicate: x => x.Id == id);
+                var user = await _uow.GetRepository<User>().GetFirstOrDefaultAsync(predicate: x => x.Id == id);
 
                 user.Disable();
 

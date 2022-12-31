@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace Prototype.Infra.Data.Repositories
 {
@@ -27,7 +28,7 @@ namespace Prototype.Infra.Data.Repositories
             _dbSet.Remove(_dbSet.Find(id));
         }
 
-        public IQueryable<TEntity> Get(Expression<Func<TEntity, bool>> predicate = null, bool disableTracking = true)
+        public async Task<IQueryable<TEntity>> GetAsync(Expression<Func<TEntity, bool>> predicate = null, bool disableTracking = true)
         {
             IQueryable<TEntity> query = _dbSet;
 
@@ -35,10 +36,12 @@ namespace Prototype.Infra.Data.Repositories
 
             if (predicate != null) query = query.Where(predicate);
 
-            return query;
+            await query.ToListAsync();
+
+            return query.AsQueryable() ;
         }
 
-        public TEntity GetFirstOrDefault(Expression<Func<TEntity, bool>> predicate = null,
+        public async Task<TEntity> GetFirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate = null,
                                    Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
                                    Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null,
                                    bool disableTracking = false, bool ignoreQueryFilters = false)
@@ -54,12 +57,12 @@ namespace Prototype.Infra.Data.Repositories
             if (ignoreQueryFilters) query = query.IgnoreQueryFilters();
 
             if (orderBy != null)
-                return orderBy(query).FirstOrDefault();
+                return await orderBy(query).FirstOrDefaultAsync();
             else
-                return query.FirstOrDefault();
+                return await query.FirstOrDefaultAsync();
         }
 
-        public TResult GetFirstOrDefault<TResult>(Expression<Func<TEntity, TResult>> selector,
+        public async Task <TResult> GetFirstOrDefaultAsync<TResult>(Expression<Func<TEntity, TResult>> selector,
                                                   Expression<Func<TEntity, bool>> predicate = null,
                                                   Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
                                                   Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null,
@@ -76,12 +79,12 @@ namespace Prototype.Infra.Data.Repositories
             if (ignoreQueryFilters) query = query.IgnoreQueryFilters();
 
             if (orderBy != null)
-                return orderBy(query).Select(selector).FirstOrDefault();
+                return await orderBy(query).Select(selector).FirstOrDefaultAsync();
             else
-                return query.Select(selector).FirstOrDefault();
+                return await query.Select(selector).FirstOrDefaultAsync();
         }
 
-        public IPagedList<TEntity> GetPagedList(Expression<Func<TEntity, bool>> predicate = null,
+        public async Task<IPagedList<TEntity>> GetPagedListAsync(Expression<Func<TEntity, bool>> predicate = null,
                                                 Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
                                                 Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null,
                                                 int pageIndex = 0, int pageSize = 10, bool disableTracking = true, bool ignoreQueryFilters = false)
@@ -95,6 +98,8 @@ namespace Prototype.Infra.Data.Repositories
             if (predicate != null) query = query.Where(predicate);
 
             if (ignoreQueryFilters) query = query.IgnoreQueryFilters();
+
+            await query.ToListAsync();
 
             if (orderBy != null)
                 return orderBy(query).ToPagedList(pageIndex, pageSize);

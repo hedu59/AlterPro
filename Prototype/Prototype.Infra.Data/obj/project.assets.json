@@ -10548,11 +10548,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
+      "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
       "projectName": "Prototype.Infra.Data",
-      "projectPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
+      "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Infra.Data\\obj\\",
+      "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Infra.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -10573,8 +10573,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj": {
-              "projectPath": "C:\\Projetos\\Estudo\\ProjetoSeplag\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj"
+            "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj": {
+              "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj"
             }
           }
         }

@@ -53,18 +53,9 @@ namespace Prototype.Application.Handlers
             }
             catch (Exception ex)
             {
-                new CommandResult(success: false, message: ex.Message, data: null);
-                return await Task.FromResult(new CommandResult(success: false, message: "Erro ao salvar Servidor.", data: command.Notifications));
+                return new CommandResult(success: false, message: ex.Message, data: null);
             }
         }
-
-        private async Task CriarLog(Guid servidorId, string obsevacao)
-        {
-            var log = new LogTransacao() { Observacao = obsevacao, ServidorId = servidorId };
-            _logTransacao.ProduzirTransacao(log);
-          
-        }
-
         public async Task<ICommandResult> Handle(UpdateServidorCommand command, CancellationToken cancellationToken)
         {
             try
@@ -76,13 +67,13 @@ namespace Prototype.Application.Handlers
                     return new CommandResult(success: false, message: null, data: command.Notifications);
 
 
-                var servidor = _uow
+                var servidor = await _uow
                 .GetRepository<Servidor>()
-                    .GetFirstOrDefault(predicate: x => x.Id == command.ServidorId);
+                    .GetFirstOrDefaultAsync(predicate: x => x.Id == command.ServidorId);
 
                 if (servidor != null)
                 {
-                    var setorAnterior = servidor.SetorTramitacao;
+                    var setorAnterior =  servidor.SetorTramitacao;
 
                     servidor.UpdateServidor(command.Tramitacao);
                     _uow.GetRepository<Servidor>().Update(entity: servidor);
@@ -93,21 +84,21 @@ namespace Prototype.Application.Handlers
 
                     await CriarLog(servidor.Id, "Servidor Alterado");
 
-                    return await Task.FromResult(new CommandResult(success: true, message: "Servidor alterado com sucesso", data: command));
+                    return new CommandResult(success: true, message: "Servidor alterado com sucesso", data: command);
                 }
 
-                return await Task.FromResult(new CommandResult(success: false, message: "Servidor nao encontrado", data: command));
+                return new CommandResult(success: false, message: "Servidor nao encontrado", data: command);
             }
             catch (Exception ex)
             {
-                return await Task.FromResult(new CommandResult(success: false, message: ex.Message, data: null));
+                return new CommandResult(success: false, message: ex.Message, data: null);
             }
         }
         public async Task<ICommandResult> Handle(DeleteServidorCommand command, CancellationToken cancellationToken)
         {
             try
             {
-                var servidor = _uow.GetRepository<User>().GetFirstOrDefault(predicate: x => x.Id == command.ServidorId);
+                var servidor = await _uow.GetRepository<User>().GetFirstOrDefaultAsync(predicate: x => x.Id == command.ServidorId);
 
                 servidor.Disable();
 
@@ -117,11 +108,11 @@ namespace Prototype.Application.Handlers
 
                 await CriarLog(servidor.Id, "Servidor Deletado");
 
-                return await Task.FromResult(new CommandResult(success: true, message: "Usuário removido com sucesso", data: null));
+                return new CommandResult(success: true, message: "Usuário removido com sucesso", data: null);
             }
             catch (Exception ex)
             {
-                return await Task.FromResult(new CommandResult(success: false, message: ex.Message, data: null));
+                return new CommandResult(success: false, message: ex.Message, data: null);
             }
         }
 
@@ -148,6 +139,12 @@ namespace Prototype.Application.Handlers
                 throw new Exception(ex.Message, ex);
             }
 
+        }
+        private async Task CriarLog(Guid servidorId, string obsevacao)
+        {
+            var log = new LogTransacao() { Observacao = obsevacao, ServidorId = servidorId };
+            _logTransacao.ProduzirTransacao(log);
+          
         }
 
     }
