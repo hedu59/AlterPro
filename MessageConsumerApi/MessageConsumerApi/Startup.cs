@@ -1,3 +1,4 @@
+using MessageConsumer.Application.Interfaces;
 using MessageConsumer.Application.Models;
 using MessageConsumer.Application.Services;
 using MessageConsumer.Infra;
@@ -22,8 +23,9 @@ namespace MessageConsumerApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<ITransacaoMongoRepository, TransacaoMongoRepository>();
+            services.AddSingleton<IEmailService, EmailService>();
             services.Configure<DbConfiguration>(Configuration.GetSection("MongoDbConnection"));
-            services.AddHostedService<LogTransacaoConsumer>();
+            services.AddHostedService<InvitationConsumer>();
             services.Configure<RabbitMqConfiguration>(Configuration.GetSection("RabbitMqConfig"));
             services.AddControllers();
         }

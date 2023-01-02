@@ -11,7 +11,7 @@ namespace MessageConsumer.Infra
 {
     public class TransacaoMongoRepository : ITransacaoMongoRepository
     {
-        private readonly IMongoCollection<LogTransacao> _collection;
+        private readonly IMongoCollection<Invitation> _collection;
         private readonly DbConfiguration _settings;
 
         public TransacaoMongoRepository(IOptions<DbConfiguration> settings)
@@ -19,10 +19,10 @@ namespace MessageConsumer.Infra
             _settings = settings.Value;
             var client = new MongoClient(_settings.ConnectionString);
             var database = client.GetDatabase(_settings.DatabaseName);
-            _collection = database.GetCollection<LogTransacao>(_settings.CollectionName);
+            _collection = database.GetCollection<Invitation>(_settings.CollectionName);
         }
 
-        public async Task<LogTransacao> CreateAsync(LogTransacao log)
+        public async Task<Invitation> CreateAsync(Invitation log)
         {
             try
             {
@@ -35,21 +35,21 @@ namespace MessageConsumer.Infra
             }
         }
 
-        public Task<List<LogTransacao>> GetAllAsync()
+        public Task<List<Invitation>> GetAllAsync()
         {
             return _collection.Find(c => true).ToListAsync();
         }
 
-        public Task<LogTransacao> GetByIdAsync(string id)
+        public Task<Invitation> GetByIdAsync(string id)
         {
-            Expression<Func<LogTransacao, bool>> filter = ObterFilter(id);
+            Expression<Func<Invitation, bool>> filter = ObterFilter(id);
 
             var servidor = _collection.Find(filter).FirstOrDefaultAsync();
 
             return servidor;
         }
 
-        private static Expression<Func<LogTransacao, bool>> ObterFilter(string id)
+        private static Expression<Func<Invitation, bool>> ObterFilter(string id)
         {
             return x => x.Id.Equals(ObjectId.Parse(id));
         }

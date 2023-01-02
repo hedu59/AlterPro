@@ -1,5 +1,6 @@
 ﻿using Flunt.Notifications;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Prototype.Application.Commands.Input.Invitation;
 using Prototype.Application.Filas.Models;
 using Prototype.Application.Interfaces.Filas;
@@ -41,7 +42,7 @@ namespace Prototype.Application.Handlers
 
                 Invitation invitation = await _uow
                     .GetRepository<Invitation>()
-                    .GetFirstOrDefaultAsync(predicate: x => x.Id == command.InvitationId);
+                    .GetFirstOrDefaultAsync(predicate: x => x.Id == command.InvitationId, include: y=> y.Include(x=> x.Contact));
 
                 if (invitation == null) return new CommandResult(success: false, message: "Invitation not found", data: command);
 
@@ -94,7 +95,13 @@ namespace Prototype.Application.Handlers
 
         private void SendEmailInviteAccepted(Invitation invitation)
         {
-            var message = new InvitationMessage(invitation, Messages.MessageEmailInvitationAccepted) { };
+            var message = new InvitationMessage(
+                invitation.Id,
+                invitation?.Contact?.FullName,
+                invitation?.Contact?.PhoneNumber,
+                invitation.Price,
+                invitation.Description) 
+            { };
             _emailProducer.ProduceEmail(message);
         }
     }

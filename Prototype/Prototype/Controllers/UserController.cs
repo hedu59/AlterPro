@@ -13,7 +13,6 @@ namespace Prototype.Api.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [EnableCors("MyPolicy")]
-    [ApiExplorerSettings(IgnoreApi = true)]
     public class UserController : ControllerBase
     {
 

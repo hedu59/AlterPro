@@ -1,4 +1,5 @@
-﻿using MessageConsumer.Application.Models;
+﻿using MessageConsumer.Application.Interfaces;
+using MessageConsumer.Application.Models;
 using MessageConsumer.Domain.Models;
 using MessageConsumer.Infra;
 using Microsoft.Extensions.Hosting;
@@ -14,16 +15,18 @@ using System.Threading.Tasks;
 
 namespace MessageConsumer.Application.Services
 {
-    public class LogTransacaoConsumer : BackgroundService
+    public class InvitationConsumer : BackgroundService
     {
         private readonly ITransacaoMongoRepository _mongoRepository;
         private readonly RabbitMqConfiguration _configuration;
+        private readonly IEmailService _emailService;
         private readonly IConnection _connection;
         private readonly IModel _channel;
 
-        public LogTransacaoConsumer(IOptions<RabbitMqConfiguration> option, ITransacaoMongoRepository mongoRepository)
+        public InvitationConsumer(IOptions<RabbitMqConfiguration> option, ITransacaoMongoRepository mongoRepository, IEmailService emailService)
         {
             _mongoRepository = mongoRepository;
+            _emailService = emailService;
             _configuration = option.Value;
             var factory = new ConnectionFactory
             {
@@ -48,9 +51,11 @@ namespace MessageConsumer.Application.Services
             {
                 var contentArray = eventArgs.Body.ToArray();
                 var contentString = Encoding.UTF8.GetString(contentArray);
-                var message = JsonConvert.DeserializeObject<LogTransacaoMessage>(contentString);
+                var message = JsonConvert.DeserializeObject<InvitationMessage>(contentString);
 
-                CriarLogTransacao(message);
+                _emailService.SendEmailAsync(message);
+
+                RegisterInvitation(message);
                 _channel.BasicAck(eventArgs.DeliveryTag, false);
             };
 
@@ -58,16 +63,20 @@ namespace MessageConsumer.Application.Services
             return Task.CompletedTask;
         }
 
-        public void CriarLogTransacao(LogTransacaoMessage log)
+        public void RegisterInvitation(InvitationMessage message)
         {
-            var logTransacao = new LogTransacao()
+            var invitation = new Invitation()
             {
-                Id = ObjectId.Parse(log.Id),
-                Observacao = log.Observacao,
-                RegisterDate = log.RegisterDate, 
-                ServidorId = log.ServidorId,
+                Id = ObjectId.Parse(message.Id),
+                RegisterDate = message.RegisterDate, 
+                Description = message.Description,
+                InvitationId = message.InvitationId,
+                InvitationPrice = message.InvitationPrice,
+                ContactFullName = message.ContactFullName,
+                ContactPhoneNumber = message.ContactPhoneNumber,  
+
             };
-            _mongoRepository.CreateAsync(logTransacao);
+            _mongoRepository.CreateAsync(invitation);
         }
     }
 }

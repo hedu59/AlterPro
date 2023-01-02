@@ -4,9 +4,9 @@ using System;
 
 namespace MessageConsumer.Application.Models
 {
-    public class LogTransacao
+    public class Invitation
     {
-        public LogTransacao()
+        public Invitation()
         {
             this.Id = ObjectId.GenerateNewId();
             this.RegisterDate = DateTime.UtcNow;
@@ -14,9 +14,12 @@ namespace MessageConsumer.Application.Models
 
         [BsonId()]
         public ObjectId Id { get; set; }
-        public Guid ServidorId { get; set; }
         public DateTime RegisterDate { get; set; }
-        public string Observacao { get; set; }
+        public string Description { get; set; }
+        public long InvitationId { get; set; }
+        public string ContactFullName { get; set; }
+        public string ContactPhoneNumber { get; set; }
+        public decimal InvitationPrice { get; set; }
 
     }
 }

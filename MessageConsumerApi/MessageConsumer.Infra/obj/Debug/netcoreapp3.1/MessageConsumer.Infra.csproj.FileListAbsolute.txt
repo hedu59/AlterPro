@@ -11,3 +11,16 @@ C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\ne
 C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.csproj.CopyComplete
 C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.dll
 C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.pdb
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Infra\bin\Debug\netcoreapp3.1\MessageConsumer.Infra.deps.json
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Infra\bin\Debug\netcoreapp3.1\MessageConsumer.Infra.dll
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Infra\bin\Debug\netcoreapp3.1\MessageConsumer.Infra.pdb
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Infra\bin\Debug\netcoreapp3.1\MessageConsumer.Domain.dll
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Infra\bin\Debug\netcoreapp3.1\MessageConsumer.Domain.pdb
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.csproj.AssemblyReference.cache
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.AssemblyInfoInputs.cache
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.AssemblyInfo.cs
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.csproj.CoreCompileInputs.cache
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.csproj.CopyComplete
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.dll
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Infra\obj\Debug\netcoreapp3.1\MessageConsumer.Infra.pdb

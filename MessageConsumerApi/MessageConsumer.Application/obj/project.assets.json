@@ -34,6 +34,22 @@
           }
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
         "type": "package",
         "compile": {
@@ -485,6 +501,25 @@
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
         "microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
         "microsoft.extensions.configuration.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+      "sha512": "b3ErKzND8LIC7o08QAVlKfaEIYEvLJbtmVbFZVBRXeu9YkKfSSzLZfR1SUfQPBIy9mKLhEtJgGYImkcMNaKE0A==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.binder/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Configuration.Binder.dll",
+        "lib/net461/Microsoft.Extensions.Configuration.Binder.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.xml",
+        "microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512",
+        "microsoft.extensions.configuration.binder.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -1071,6 +1106,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "MessageConsumer.Infra >= 1.0.0",
+      "Microsoft.Extensions.Configuration.Abstractions >= 6.0.0",
+      "Microsoft.Extensions.Configuration.Binder >= 6.0.0",
       "Microsoft.Extensions.Hosting.Abstractions >= 6.0.0",
       "Microsoft.Extensions.Options >= 6.0.0",
       "MongoDB.Bson >= 2.17.1",
@@ -1085,11 +1122,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj",
+      "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj",
       "projectName": "MessageConsumer.Application",
-      "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj",
+      "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\obj\\",
+      "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1110,8 +1147,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj"
+            "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj": {
+              "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj"
             }
           }
         }
@@ -1126,6 +1163,14 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
+          "Microsoft.Extensions.Configuration.Binder": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
           "Microsoft.Extensions.Hosting.Abstractions": {
             "target": "Package",
             "version": "[6.0.0, )"

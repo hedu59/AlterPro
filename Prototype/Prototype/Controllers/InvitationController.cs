@@ -5,8 +5,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Prototype.Application.Commands.Input.Invitation;
 using Prototype.Application.Interfaces;
-using Prototype.Domain.Commands.Output;
-using Prototype.Shared.Commands;
 using System;
 using System.Threading.Tasks;
 
@@ -15,7 +13,7 @@ namespace Prototype.Api.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [EnableCors("MyPolicy")]
-    [ApiExplorerSettings(IgnoreApi = true)]
+
     public class InvitationController : ControllerBase
     {
 

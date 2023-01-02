@@ -8,3 +8,13 @@ C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\n
 C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.dll
 C:\Users\User\source\repos\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.pdb
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Domain\bin\Debug\netcoreapp3.1\MessageConsumer.Domain.deps.json
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Domain\bin\Debug\netcoreapp3.1\MessageConsumer.Domain.dll
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Domain\bin\Debug\netcoreapp3.1\MessageConsumer.Domain.pdb
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.csproj.AssemblyReference.cache
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.AssemblyInfoInputs.cache
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.AssemblyInfo.cs
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.dll
+C:\Projetos\Estudo\AlterPro\MessageConsumerApi\MessageConsumer.Domain\obj\Debug\netcoreapp3.1\MessageConsumer.Domain.pdb

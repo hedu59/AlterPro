@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumerApi\\MessageConsumerApi.csproj": {}
+    "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumerApi\\MessageConsumerApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj": {
+    "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj",
+        "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj",
         "projectName": "MessageConsumer.Application",
-        "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj",
+        "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\obj\\",
+        "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -32,8 +32,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj"
+              "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj": {
+                "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj"
               }
             }
           }
@@ -48,6 +48,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.Extensions.Hosting.Abstractions": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -89,14 +97,14 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj": {
+    "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj",
+        "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj",
         "projectName": "MessageConsumer.Domain",
-        "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj",
+        "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\obj\\",
+        "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -154,14 +162,14 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj": {
+    "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj",
+        "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj",
         "projectName": "MessageConsumer.Infra",
-        "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj",
+        "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Infra\\MessageConsumer.Infra.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Infra\\obj\\",
+        "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -182,8 +190,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj"
+              "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj": {
+                "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj"
               }
             }
           }
@@ -227,14 +235,14 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumerApi\\MessageConsumerApi.csproj": {
+    "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumerApi\\MessageConsumerApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumerApi\\MessageConsumerApi.csproj",
+        "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumerApi\\MessageConsumerApi.csproj",
         "projectName": "MessageConsumerApi",
-        "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumerApi\\MessageConsumerApi.csproj",
+        "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumerApi\\MessageConsumerApi.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumerApi\\obj\\",
+        "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumerApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -255,8 +263,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj"
+              "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj": {
+                "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\MessageConsumerApi\\MessageConsumer.Application\\MessageConsumer.Application.csproj"
               }
             }
           }

@@ -8,8 +8,8 @@ namespace MessageConsumer.Infra
 {
     public interface ITransacaoMongoRepository
     {
-        Task<List<LogTransacao>> GetAllAsync();
-        Task<LogTransacao> GetByIdAsync(string id);
-        Task<LogTransacao> CreateAsync(LogTransacao log);
+        Task<List<Invitation>> GetAllAsync();
+        Task<Invitation> GetByIdAsync(string id);
+        Task<Invitation> CreateAsync(Invitation invitation);
     }
 }
