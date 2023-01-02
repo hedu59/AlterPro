@@ -60,6 +60,8 @@ C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Application\bin\Debug\netcoreapp
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Application\bin\Debug\netcoreapp3.1\Prototype.Domain.pdb
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Application\bin\Debug\netcoreapp3.1\Prototype.Shared.pdb
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Application\obj\Debug\netcoreapp3.1\Prototype.Application.csproj.AssemblyReference.cache
+C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Application\obj\Debug\netcoreapp3.1\Prototype.Application.Messages.resources
+C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Application\obj\Debug\netcoreapp3.1\Prototype.Application.csproj.GenerateResource.cache
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Application\obj\Debug\netcoreapp3.1\Prototype.Application.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Application\obj\Debug\netcoreapp3.1\Prototype.Application.AssemblyInfoInputs.cache
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Application\obj\Debug\netcoreapp3.1\Prototype.Application.AssemblyInfo.cs

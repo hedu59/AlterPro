@@ -14,24 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20221231175432_InitialMRV.cs" />
-    <Compile Remove="Migrations\20221231175432_InitialMRV.Designer.cs" />
-    <Compile Remove="Migrations\20221231180452_InitialMRV.cs" />
-    <Compile Remove="Migrations\20221231180452_InitialMRV.Designer.cs" />
-    <Compile Remove="Migrations\20221231181734_InitialMRV.cs" />
-    <Compile Remove="Migrations\20221231181734_InitialMRV.Designer.cs" />
-    <Compile Remove="Migrations\20221231184545_InitialMRV.cs" />
-    <Compile Remove="Migrations\20221231184545_InitialMRV.Designer.cs" />
-    <Compile Remove="Migrations\20221231185749_Seed.cs" />
-    <Compile Remove="Migrations\20221231185749_Seed.Designer.cs" />
-    <Compile Remove="Migrations\20221231185839_SeedContacts.cs" />
-    <Compile Remove="Migrations\20221231185839_SeedContacts.Designer.cs" />
-    <Compile Remove="Migrations\20221231190216_Seed2.cs" />
-    <Compile Remove="Migrations\20221231190216_Seed2.Designer.cs" />
-    <Compile Remove="Migrations\20221231190238_Seed22.cs" />
-    <Compile Remove="Migrations\20221231190238_Seed22.Designer.cs" />
-    <Compile Remove="Migrations\20221231190344_Seed.cs" />
-    <Compile Remove="Migrations\20221231190344_Seed.Designer.cs" />
+    <Compile Remove="Migrations\20221231190446_InitialMRV.cs" />
+    <Compile Remove="Migrations\20221231190446_InitialMRV.Designer.cs" />
   </ItemGroup>
 	
 

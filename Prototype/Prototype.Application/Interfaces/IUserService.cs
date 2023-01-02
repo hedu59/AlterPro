@@ -7,14 +7,9 @@ namespace Prototype.Application.Interfaces
 {
     public interface IUserService
     {
-        Task<ICommandResult>AuthenticationUser(string login, string password, string email);
+        Task<ICommandResult> AuthenticationUser(string login, string password, string email);
 
         ICommandResult CreateUserDefault();
 
-       ICommandResult CreateUser(CreateUserCommand command);
-
-        Task<ICommandResult> UpdateUser(UpdateUserCommand command);
-
-        Task<ICommandResult> DeleteUser(Guid id);
     }
 }

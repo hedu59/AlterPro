@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\Repositories\CustomRepositories\" />
+    <Folder Include="Queries\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -22,9 +22,6 @@ namespace Prototype.Infra.Data
 
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Documento> Documentos { get; set; }
-        public DbSet<ProcessoTramitacao> Tramitacao { get; set; }
-        public DbSet<Servidor> BeneficioServidores { get; set; }
         public DbSet<Invitation> Invitites { get; set; }
         public DbSet<Contact> Contacts { get; set; }
 

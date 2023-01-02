@@ -23,7 +23,7 @@ namespace Prototype
             using (var scope = host.Services.CreateScope())
             {
                 var db = scope.ServiceProvider.GetRequiredService<PrototypeDataContext>();
-                //Same as the question
+
                 db.Database.Migrate();
             }
 

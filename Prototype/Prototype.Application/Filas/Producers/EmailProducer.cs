@@ -1,21 +1,21 @@
 ﻿using Newtonsoft.Json;
+using Prototype.Application.Filas.Models;
 using Prototype.Application.Interfaces.Filas;
-using Prototype.Domain.Entities;
 using RabbitMQ.Client;
 using System.Text;
 
 namespace Prototype.Application.Filas.Producers
 {
-    public class LogTransacaoProducer : ILogTransacaoProducer
+    public class EmailProducer : IEmailProducer
     {
         private readonly ConnectionFactory _factory;
-        private const string QUEUE_NAME = "log_message";
-        public LogTransacaoProducer()
+        private const string QUEUE_NAME = "mail_message";
+        public EmailProducer()
         {
             _factory = new ConnectionFactory() { HostName = "localhost" };
         }
 
-        public void ProduzirTransacao(LogTransacao message)
+        public void ProduceEmail(InvitationMessage message)
         {
             using (var connection = _factory.CreateConnection())
             {

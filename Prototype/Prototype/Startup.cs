@@ -47,9 +47,8 @@ namespace Prototype
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, PrototypeDataContext context)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            context.Database.Migrate();
 
             if (env.IsDevelopment())
             {

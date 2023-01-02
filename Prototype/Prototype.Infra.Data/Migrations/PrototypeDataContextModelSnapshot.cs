@@ -49,75 +49,6 @@ namespace Prototype.Infra.Data.Migrations
                     b.ToTable("Contacts");
                 });
 
-            modelBuilder.Entity("Prototype.Domain.Entities.Documento", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn)
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("Categoria")
-                        .HasColumnName("Categoria")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CategoriaDescicao")
-                        .HasColumnName("CategoriaDescicao")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("FileAsBase64")
-                        .IsRequired()
-                        .HasColumnName("Arquivo_Base64")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte[]>("FileAsByteArray")
-                        .IsRequired()
-                        .HasColumnName("Bytes")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<string>("FileName")
-                        .IsRequired()
-                        .HasColumnName("Nome_Arquivo")
-                        .HasColumnType("nvarchar(200)")
-                        .HasMaxLength(200);
-
-                    b.Property<string>("FileSize")
-                        .IsRequired()
-                        .HasColumnName("Tamanho_Arquivo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FileType")
-                        .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("Tipo")
-                        .HasColumnType("nvarchar(max)")
-                        .HasDefaultValue("application/pdf");
-
-                    b.Property<DateTime>("LastModifiedDate")
-                        .HasColumnName("Ultima_Modificacao")
-                        .HasColumnType("datetime2");
-
-                    b.Property<long>("ServidorId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long?>("ServidorId1")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ServidorId");
-
-                    b.HasIndex("ServidorId1");
-
-                    b.ToTable("Documentos");
-                });
-
             modelBuilder.Entity("Prototype.Domain.Entities.Invitation", b =>
                 {
                     b.Property<long>("Id")
@@ -156,112 +87,6 @@ namespace Prototype.Infra.Data.Migrations
                     b.HasIndex("ContactId");
 
                     b.ToTable("Invitations");
-                });
-
-            modelBuilder.Entity("Prototype.Domain.Entities.ProcessoTramitacao", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn)
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DataTramitacao")
-                        .HasColumnName("Data_Tramitacao")
-                        .HasColumnType("datetime2");
-
-                    b.Property<long?>("DocumentoId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("ServidorId")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("SetorDestino")
-                        .HasColumnName("Setor_Destino")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SetorDestinoDescricao")
-                        .HasColumnName("Setor_Destino_Descricao")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("SetorOrigem")
-                        .HasColumnName("Setor_Origem")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SetorOrigemDescricao")
-                        .HasColumnName("Setor_Origem_Descricao")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UsuarioMovimentacao")
-                        .IsRequired()
-                        .HasColumnName("Usuario")
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DocumentoId");
-
-                    b.HasIndex("ServidorId");
-
-                    b.ToTable("Tramitacao");
-                });
-
-            modelBuilder.Entity("Prototype.Domain.Entities.Servidor", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn)
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("CPF")
-                        .IsRequired()
-                        .HasColumnName("CPF")
-                        .HasColumnType("nvarchar(11)")
-                        .HasMaxLength(11);
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Matricula")
-                        .IsRequired()
-                        .HasColumnName("Matricula")
-                        .HasColumnType("nvarchar(40)")
-                        .HasMaxLength(40);
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnName("Nome")
-                        .HasColumnType("nvarchar(80)")
-                        .HasMaxLength(80);
-
-                    b.Property<string>("Orgao")
-                        .IsRequired()
-                        .HasColumnName("Orgao")
-                        .HasColumnType("nvarchar(80)")
-                        .HasMaxLength(80);
-
-                    b.Property<string>("SetorDescricao")
-                        .HasColumnName("SetorDescricao")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("SetorTramitacao")
-                        .HasColumnName("Setor_Atual")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Servidores");
                 });
 
             modelBuilder.Entity("Prototype.Domain.Entities.User", b =>
@@ -305,19 +130,6 @@ namespace Prototype.Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("Prototype.Domain.Entities.Documento", b =>
-                {
-                    b.HasOne("Prototype.Domain.Entities.Servidor", "Servidor")
-                        .WithMany()
-                        .HasForeignKey("ServidorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Prototype.Domain.Entities.Servidor", null)
-                        .WithMany("Documentos")
-                        .HasForeignKey("ServidorId1");
                 });
 
             modelBuilder.Entity("Prototype.Domain.Entities.Invitation", b =>
@@ -404,19 +216,6 @@ namespace Prototype.Infra.Data.Migrations
                             b1.WithOwner()
                                 .HasForeignKey("InvitationId");
                         });
-                });
-
-            modelBuilder.Entity("Prototype.Domain.Entities.ProcessoTramitacao", b =>
-                {
-                    b.HasOne("Prototype.Domain.Entities.Servidor", "Documento")
-                        .WithMany()
-                        .HasForeignKey("DocumentoId");
-
-                    b.HasOne("Prototype.Domain.Entities.Servidor", null)
-                        .WithMany("Tramitacoes")
-                        .HasForeignKey("ServidorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

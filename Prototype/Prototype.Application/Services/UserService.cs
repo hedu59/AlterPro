@@ -16,83 +16,56 @@ using System.Threading.Tasks;
 
 namespace Prototype.Application.Services
 {
-    //public class UserService : IUserService
-    //{
-    //    private readonly IUnitOfWork _uow;
-    //    private readonly IConfiguration _configuration;
-    //    private readonly UserHandler _handler;
+    public class UserService : IUserService
+    {
+        private readonly IUnitOfWork _uow;
+        private readonly IConfiguration _configuration;
+        private readonly UserHandler _handler;
 
-    //    public UserService(IUnitOfWork uow , IConfiguration configuration)
-    //    {
-    //        _uow = uow;
-    //        _configuration = configuration;
-    //    }
+        public UserService(IUnitOfWork uow, IConfiguration configuration)
+        {
+            _uow = uow;
+            _configuration = configuration;
+        }
 
-    //    public async Task<ICommandResult> AuthenticationUser(string login, string password, string email)
-    //    {
-           
-    //        var user = await _uow.GetRepository<User>().GetFirstOrDefaultAsync(predicate: x => x.Login == login && x.Password == password);
+        public async Task<ICommandResult> AuthenticationUser(string login, string password, string email)
+        {
 
-    //        if(user != null)
-    //        {
+            var user = await _uow.GetRepository<User>().GetFirstOrDefaultAsync(predicate: x => x.Login == login && x.Password == password);
 
-    //            var claims = new[]
-    //            {
-    //                new Claim(ClaimTypes.Name, login)
+            if (user != null)
+            {
 
-    //            };
+                var claims = new[]
+                {
+                    new Claim(ClaimTypes.Name, login)
 
-    //            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("TokenConfig:HashKey").Value));
-    //            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-    //            var token = new JwtSecurityToken
-    //            (
-    //                issuer: "prototype",
-    //                audience: "prototype",
-    //                claims: claims,
-    //                expires: DateTime.Now.AddHours(12),
-    //                signingCredentials: creds
+                };
 
-    //            );
+                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("TokenConfig:HashKey").Value));
+                var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+                var token = new JwtSecurityToken
+                (
+                    issuer: "prototype",
+                    audience: "prototype",
+                    claims: claims,
+                    expires: DateTime.Now.AddHours(12),
+                    signingCredentials: creds
 
-    //            var tokenResult = new { token = new JwtSecurityTokenHandler().WriteToken(token) };
+                );
 
-    //            return new CommandResult(true, "Credenciais Validas", tokenResult); ;
-    //        }
+                var tokenResult = new { token = new JwtSecurityTokenHandler().WriteToken(token) };
 
-    //        return new CommandResult(true, "Credenciais inválidas", new { Propriety = "LOGIN ou SENHA", Message = "Login ou Senha invalidos!" });
-    //    }
+                return new CommandResult(true, "Credenciais Validas", tokenResult); ;
+            }
 
-    //    public ICommandResult CreateUserDefault()
-    //    { 
-    //        return _handler.Handle();
-    //    }
+            return new CommandResult(true, "Credenciais inválidas", new { Propriety = "LOGIN ou SENHA", Message = "Login ou Senha invalidos!" });
+        }
 
-    //    //public async Task<ICommandResult> CreateUser(CreateUserCommand command)
-    //    //{
-    //    //    command.Validate();
+        public ICommandResult CreateUserDefault()
+        {
+            return _handler.Handle();
+        }
 
-    //    //    if (!command.Valid)
-    //    //        return new CommandResult(success: false, message: null, data: command.Notifications);
-
-    //    //    return await _handler.Handle(command);
-
-    //    //}
-
-    //    //public async Task<ICommandResult> UpdateUser(UpdateUserCommand command)
-    //    //{
-    //    //    command.Validate();
-
-    //    //    if (!command.Valid)
-    //    //        return new CommandResult(success: false, message: null, data: command.Notifications);
-
-    //    //    return  await _handler.Handle(command);
-    //    //}
-
-    //    //public async Task<ICommandResult> DeleteUser(Guid id)
-    //    //{
-    //    //    return await _handler.Handle(id);
-    //    //}
-
-        
-    //}
+    }
 }

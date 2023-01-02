@@ -1,6 +1,5 @@
 ﻿using Flunt.Notifications;
 using MediatR;
-using Prototype.Application.Commands.Input.Servidores;
 using Prototype.Application.Commands.Input.User;
 using Prototype.Domain.Commands.Output;
 using Prototype.Domain.Entities;
@@ -48,7 +47,7 @@ namespace Prototype.Application.Handlers
 
                 _uow.SaveChanges();
 
-                return new CommandResult(success: true, message: "Usuário salvo com sucesso", data: command);
+                return await Task.FromResult( new CommandResult(success: true, message: "Usuário salvo com sucesso", data: command));
             }
             catch (Exception ex)
             {
@@ -72,14 +71,14 @@ namespace Prototype.Application.Handlers
 
                     _uow.SaveChanges();
 
-                    return new CommandResult(success: true, message: "Usuário alterado com sucesso", data: command);
+                    return await Task.FromResult(new CommandResult(success: true, message: "Usuário alterado com sucesso", data: command));
                 }
 
-                return new CommandResult(success: false, message: "Usuário nao encontrada", data: command);
+                return await Task.FromResult(new CommandResult(success: false, message: "Usuário nao encontrada", data: command));
             }
             catch (Exception ex)
             {
-                return new CommandResult(success: false, message: ex.Message, data: null);
+                return await Task.FromResult(new CommandResult(success: false, message: ex.Message, data: null));
             }
         }
     }

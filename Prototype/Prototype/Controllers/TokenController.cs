@@ -24,11 +24,8 @@ namespace Prototype.Api.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public IActionResult RequestToken([FromBody] User user)
-        {
+        public IActionResult RequestToken([FromBody] User user)=> 
+            Ok(_userService.AuthenticationUser(user.Login, user.Password, user.Email));
 
-            var validar = _userService.AuthenticationUser(user.Login, user.Password, user.Email);
-            return Ok(validar);
-        }
     }
 }

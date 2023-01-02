@@ -764,7 +764,6 @@ C:\Projetos\Estudo\ProjetoSeplag\Prototype\Prototype.Tests\obj\Debug\netcoreapp3
 C:\Projetos\Estudo\ProjetoSeplag\Prototype\Prototype.Tests\obj\Debug\netcoreapp3.1\Prototype.Tests.dll
 C:\Projetos\Estudo\ProjetoSeplag\Prototype\Prototype.Tests\obj\Debug\netcoreapp3.1\Prototype.Tests.pdb
 C:\Projetos\Estudo\ProjetoSeplag\Prototype\Prototype.Tests\obj\Debug\netcoreapp3.1\Prototype.Tests.genruntimeconfig.cache
-C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Tests\obj\Debug\netcoreapp3.1\Prototype.Tests.AssemblyInfo.cs
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Tests\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Tests\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Tests\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -953,6 +952,7 @@ C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Tests\bin\Debug\netcoreapp3.1\zh
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Tests\obj\Debug\netcoreapp3.1\Prototype.Tests.csproj.AssemblyReference.cache
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Tests\obj\Debug\netcoreapp3.1\Prototype.Tests.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Tests\obj\Debug\netcoreapp3.1\Prototype.Tests.AssemblyInfoInputs.cache
+C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Tests\obj\Debug\netcoreapp3.1\Prototype.Tests.AssemblyInfo.cs
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Tests\obj\Debug\netcoreapp3.1\Prototype.Tests.csproj.CoreCompileInputs.cache
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Tests\obj\Debug\netcoreapp3.1\Prototype.Tests.csproj.CopyComplete
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Tests\obj\Debug\netcoreapp3.1\Prototype.Tests.dll

@@ -10,7 +10,7 @@ namespace Prototype.Infra.Data.Seeds
     /// </summary>
     public static class InitialSeed
     {
-        public static void CargaSeed(this MigrationBuilder migrationBuilder)
+        public static void LoadSeed(this MigrationBuilder migrationBuilder)
         {
             InsertContacts(migrationBuilder);
             InsertInvitations(migrationBuilder);

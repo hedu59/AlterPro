@@ -24,22 +24,18 @@ namespace Prototype.Api.DependencyInjection
 
         static void FilasDependencies(IServiceCollection services)
         {
-            services.AddScoped<ILogTransacaoProducer, LogTransacaoProducer>();
+            services.AddScoped<IEmailProducer, EmailProducer>();
         }
 
         static void ServicesDependencies(IServiceCollection services)
         {
             services.AddScoped<IInvitationService, InvitationService>();
-            services.AddScoped<IServidorService, ServidorService>();
-            services.AddScoped<IDocumentoService, DocumentoService>();
             services.AddScoped<IUnitOfWork, UnitOfWork<PrototypeDataContext>>();
             services.AddScoped<IUser, UserNet>();
         }
 
         static void HandlresDependecies(IServiceCollection services)
         {
-            services.AddScoped<ServidorHandler, ServidorHandler>();
-            services.AddScoped<DocumentoHandler, DocumentoHandler>();
             services.AddScoped<UserHandler, UserHandler>();
             services.AddScoped<InvitationHandler, InvitationHandler>();
         }

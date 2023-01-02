@@ -1,6 +1,8 @@
 ﻿using Flunt.Notifications;
 using MediatR;
 using Prototype.Application.Commands.Input.Invitation;
+using Prototype.Application.Filas.Models;
+using Prototype.Application.Interfaces.Filas;
 using Prototype.Domain.Commands.Output;
 using Prototype.Domain.Entities;
 using Prototype.Domain.Interfaces.IUnitOfWork;
@@ -20,10 +22,14 @@ namespace Prototype.Application.Handlers
 
     {
         private readonly IUnitOfWork _uow;
-        public InvitationHandler(IUnitOfWork uow)
+        private readonly IEmailProducer _emailProducer;
+
+        public InvitationHandler(IUnitOfWork uow, IEmailProducer emailProducer)
         {
             _uow = uow;
+            _emailProducer = emailProducer;
         }
+
 
         public async Task<ICommandResult> Handle(UpdateInvitationCommand command, CancellationToken cancellationToken)
         {
@@ -44,14 +50,16 @@ namespace Prototype.Application.Handlers
                 _uow.GetRepository<Invitation>().Update(entity: invitation);
                 _uow.SaveChanges();
 
-                return new CommandResult(success: true, message: "Invitation updated successfully", data: null);
+                if (command.Status)
+                    SendEmailInviteAccepted(invitation);
+
+                    return new CommandResult(success: true, message: "Invitation updated successfully", data: null);
             }
             catch (Exception ex)
             {
 
                 return new CommandResult(success: false, message: $"Error to update Invitation {ex.Message}", data: ex);
             }
-
 
         }
 
@@ -74,6 +82,7 @@ namespace Prototype.Application.Handlers
                     uow.SaveChanges();
                 }
 
+
                 return await Task.FromResult(new CommandResult(success: true, message: "Invitation created successfully", data: default));
             }
             catch (Exception ex)
@@ -81,6 +90,12 @@ namespace Prototype.Application.Handlers
 
                 return new CommandResult(success: false, message: $"Error to create Invitation {ex.Message}", data: ex);
             }
+        }
+
+        private void SendEmailInviteAccepted(Invitation invitation)
+        {
+            var message = new InvitationMessage(invitation, Messages.MessageEmailInvitationAccepted) { };
+            _emailProducer.ProduceEmail(message);
         }
     }
 }

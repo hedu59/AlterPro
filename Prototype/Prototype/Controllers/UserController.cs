@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Prototype.Application.Commands.Input.User;
 using Prototype.Application.Interfaces;
@@ -35,6 +36,9 @@ namespace Prototype.Api.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Create([FromBody] CreateUserCommand command)
         {
             try
@@ -51,6 +55,9 @@ namespace Prototype.Api.Controllers
         }
 
         [HttpPut]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Put([FromBody] UpdateUserCommand command)
         {
             try
