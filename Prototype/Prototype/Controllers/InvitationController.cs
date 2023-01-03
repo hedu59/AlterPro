@@ -43,7 +43,6 @@ namespace Prototype.Api.Controllers
         public async Task<IActionResult> GetAceppted(int? pageIndex, int? pageSize)
        => Ok(await _invitationService.GetInvitationsAvailablePagedAsync(pageIndex ?? 1, pageSize ?? 10, true));
 
-
         [HttpPut]
         [AllowAnonymous]
         [Route("UpdateInvitation")]

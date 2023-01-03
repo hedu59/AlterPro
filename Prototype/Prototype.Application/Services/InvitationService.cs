@@ -42,6 +42,7 @@ namespace Prototype.Application.Services
         {
             try
             {
+
                 var configuration = new MapperConfiguration(cfg =>
                 {
                     cfg.AddProfile<InvitationProfile>();

@@ -29,5 +29,6 @@ namespace Prototype.Application.Profiles
         private static string GetFirstName(Invitation src)=>src.Contact.GetFirstName(src.Contact.FullName);
 
         private static string GetCategoryDescription(Invitation src)=>src.Category.GetDescription();
+    
     }
 }

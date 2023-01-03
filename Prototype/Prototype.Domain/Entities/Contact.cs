@@ -31,7 +31,6 @@ namespace Prototype.Domain.Entities
 
         public string GetFirstName(string fullName)=> GetFirstNameFromFullName(fullName);
 
-
         private static string GetFirstNameFromFullName(string fullName)
         {
             if (!String.IsNullOrEmpty(fullName))
