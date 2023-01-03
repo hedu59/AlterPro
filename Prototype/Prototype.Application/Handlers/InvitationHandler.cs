@@ -10,8 +10,6 @@ using Prototype.Domain.Interfaces.IUnitOfWork;
 using Prototype.Domain.ValueObjects;
 using Prototype.Shared.Commands;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
