@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Tests\\Prototype.Tests.csproj": {}
+    "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Tests\\Prototype.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Tests\\Prototype.Tests.csproj": {
+    "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Tests\\Prototype.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Tests\\Prototype.Tests.csproj",
+        "projectUniqueName": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Tests\\Prototype.Tests.csproj",
         "projectName": "Prototype.Tests",
-        "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Tests\\Prototype.Tests.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Tests\\obj\\",
+        "projectPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Tests\\Prototype.Tests.csproj",
+        "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Tests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -91,17 +87,19 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

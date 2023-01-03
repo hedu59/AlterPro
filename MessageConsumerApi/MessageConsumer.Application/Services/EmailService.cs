@@ -12,11 +12,13 @@ namespace MessageConsumer.Application.Services
     public class EmailService : IEmailService
     {
         private readonly IConfiguration _configuration;
+        private readonly ILogArchiveService _logArchive;
         private  MailMessage mailMessage;
         private  SmtpClient smtpClient;
-        public EmailService(IConfiguration configuration)
+        public EmailService(IConfiguration configuration, ILogArchiveService logArchiveService)
         {
             _configuration = configuration;
+            _logArchive = logArchiveService;
             GetConfigurationEmail();
         }
         private void GetConfigurationEmail()
@@ -43,6 +45,11 @@ namespace MessageConsumer.Application.Services
             }      
         }
 
+        /// <summary>
+        /// The credentials are invalid and this method will always be an exception
+        /// </summary>
+        /// <param name="invitation"></param>
+        /// <returns></returns>
         public async Task SendEmailAsync(InvitationMessage invitation)
         {
             try
@@ -57,8 +64,7 @@ namespace MessageConsumer.Application.Services
             }
             catch (Exception e)
             {
-               //The credentials are invalid and this method will always be an exception
-
+                _logArchive.SaveLog($"ERROR TO SEND EMAIL TO: {invitation.ContactFullName}", e.Message);
             }
         }
     }

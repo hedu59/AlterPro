@@ -24,6 +24,7 @@ namespace MessageConsumerApi
         {
             services.AddSingleton<ITransacaoMongoRepository, TransacaoMongoRepository>();
             services.AddSingleton<IEmailService, EmailService>();
+            services.AddSingleton<ILogArchiveService, LogArchiveService>();
             services.Configure<DbConfiguration>(Configuration.GetSection("MongoDbConnection"));
             services.AddHostedService<InvitationConsumer>();
             services.Configure<RabbitMqConfiguration>(Configuration.GetSection("RabbitMqConfig"));

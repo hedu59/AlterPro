@@ -23,7 +23,7 @@ namespace Prototype.Domain.Interfaces.IUnitOfWork.Collections
 
         public IList<T> Items { get; private set; }
 
-        internal PagedList(IEnumerable<T> source, int pageIndex, int pageSize, int indexFrom)
+        public PagedList(IEnumerable<T> source, int pageIndex, int pageSize, int indexFrom)
         {
             if (indexFrom > pageIndex)
                 throw new ArgumentException($"indexFrom: {indexFrom} > pageIndex: {pageIndex}, must indexFrom <= pageIndex");

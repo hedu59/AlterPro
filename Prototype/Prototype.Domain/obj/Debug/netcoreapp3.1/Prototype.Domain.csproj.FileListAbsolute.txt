@@ -57,3 +57,15 @@ C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Domain\obj\Debug\netcoreapp3.1\P
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Domain\obj\Debug\netcoreapp3.1\Prototype.Domain.csproj.CopyComplete
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Domain\obj\Debug\netcoreapp3.1\Prototype.Domain.dll
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Domain\obj\Debug\netcoreapp3.1\Prototype.Domain.pdb
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Domain\bin\Debug\netcoreapp3.1\Prototype.Domain.deps.json
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Domain\bin\Debug\netcoreapp3.1\Prototype.Domain.dll
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Domain\bin\Debug\netcoreapp3.1\Prototype.Domain.pdb
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Domain\bin\Debug\netcoreapp3.1\Prototype.Shared.dll
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Domain\bin\Debug\netcoreapp3.1\Prototype.Shared.pdb
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Domain\obj\Debug\netcoreapp3.1\Prototype.Domain.csprojAssemblyReference.cache
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Domain\obj\Debug\netcoreapp3.1\Prototype.Domain.AssemblyInfoInputs.cache
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Domain\obj\Debug\netcoreapp3.1\Prototype.Domain.AssemblyInfo.cs
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Domain\obj\Debug\netcoreapp3.1\Prototype.Domain.csproj.CoreCompileInputs.cache
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Domain\obj\Debug\netcoreapp3.1\Prototype.Domain.csproj.CopyComplete
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Domain\obj\Debug\netcoreapp3.1\Prototype.Domain.dll
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Domain\obj\Debug\netcoreapp3.1\Prototype.Domain.pdb

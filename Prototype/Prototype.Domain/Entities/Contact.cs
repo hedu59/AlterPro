@@ -24,13 +24,27 @@ namespace Prototype.Domain.Entities
 
         public static Contact Create(string fullName, string phoneNumber)
         {
-            var fullNameArray = fullName.Split();
-            var firstName = String.Empty;
-
-            if (fullNameArray.Length > 0)
-                firstName = fullNameArray[0];
+            string firstName = GetFirstNameFromFullName(fullName);
 
             return new Contact(firstName, fullName, phoneNumber);
+        }
+
+        public string GetFirstName(string fullName)=> GetFirstNameFromFullName(fullName);
+
+
+        private static string GetFirstNameFromFullName(string fullName)
+        {
+            if (!String.IsNullOrEmpty(fullName))
+            {
+                var fullNameArray = fullName.Split();
+                var firstName = String.Empty;
+
+                if (fullNameArray.Length > 0)
+                    firstName = fullNameArray[0];
+
+                return firstName;
+            }
+            return fullName;
         }
 
     }

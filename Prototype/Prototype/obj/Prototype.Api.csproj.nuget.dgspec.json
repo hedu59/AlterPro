@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype\\Prototype.Api.csproj": {}
+    "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype\\Prototype.Api.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Application\\Prototype.Application.csproj": {
+    "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Application\\Prototype.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Application\\Prototype.Application.csproj",
+        "projectUniqueName": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Application\\Prototype.Application.csproj",
         "projectName": "Prototype.Application",
-        "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Application\\Prototype.Application.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Application\\obj\\",
+        "projectPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Application\\Prototype.Application.csproj",
+        "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj": {
-                "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj"
+              "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj": {
+                "projectPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj"
               }
             }
           }
@@ -95,34 +91,33 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj": {
+    "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj",
+        "projectUniqueName": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj",
         "projectName": "Prototype.Domain",
-        "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Domain\\obj\\",
+        "projectPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj",
+        "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,15 +125,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj": {
-                "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj"
+              "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj": {
+                "projectPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj"
               }
             }
           }
@@ -204,34 +198,33 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj": {
+    "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
+        "projectUniqueName": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
         "projectName": "Prototype.Infra.Data",
-        "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Infra.Data\\obj\\",
+        "projectPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -239,15 +232,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj": {
-                "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj"
+              "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj": {
+                "projectPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Domain\\Prototype.Domain.csproj"
               }
             }
           }
@@ -295,34 +287,33 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj": {
+    "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj",
+        "projectUniqueName": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj",
         "projectName": "Prototype.Shared",
-        "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Shared\\obj\\",
+        "projectPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Shared\\Prototype.Shared.csproj",
+        "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Shared\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -330,7 +321,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -392,34 +382,33 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype\\Prototype.Api.csproj": {
+    "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype\\Prototype.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype\\Prototype.Api.csproj",
+        "projectUniqueName": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype\\Prototype.Api.csproj",
         "projectName": "Prototype.Api",
-        "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype\\Prototype.Api.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype\\obj\\",
+        "projectPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype\\Prototype.Api.csproj",
+        "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -427,18 +416,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Application\\Prototype.Application.csproj": {
-                "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Application\\Prototype.Application.csproj"
+              "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Application\\Prototype.Application.csproj": {
+                "projectPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Application\\Prototype.Application.csproj"
               },
-              "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj": {
-                "projectPath": "C:\\Projetos\\Estudo\\AlterPro\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj"
+              "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj": {
+                "projectPath": "D:\\ProjetosPessoais\\MRVPrototype\\Prototype\\Prototype.Infra.Data\\Prototype.Infra.Data.csproj"
               }
             }
           }
@@ -518,17 +506,10 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.28, 3.1.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -537,7 +518,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

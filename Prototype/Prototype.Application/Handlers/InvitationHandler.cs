@@ -54,7 +54,7 @@ namespace Prototype.Application.Handlers
                 if (command.Status)
                     SendEmailInviteAccepted(invitation);
 
-                    return new CommandResult(success: true, message: "Invitation updated successfully", data: null);
+                return new CommandResult(success: true, message: "Invitation updated successfully", data: null);
             }
             catch (Exception ex)
             {

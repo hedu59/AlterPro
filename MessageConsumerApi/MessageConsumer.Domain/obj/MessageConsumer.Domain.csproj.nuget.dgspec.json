@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj": {}
+    "D:\\ProjetosPessoais\\MRVPrototype\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj": {
+    "D:\\ProjetosPessoais\\MRVPrototype\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj",
+        "projectUniqueName": "D:\\ProjetosPessoais\\MRVPrototype\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj",
         "projectName": "MessageConsumer.Domain",
-        "projectPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\MessageConsumerApi\\MessageConsumer.Domain\\obj\\",
+        "projectPath": "D:\\ProjetosPessoais\\MRVPrototype\\MessageConsumerApi\\MessageConsumer.Domain\\MessageConsumer.Domain.csproj",
+        "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjetosPessoais\\MRVPrototype\\MessageConsumerApi\\MessageConsumer.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,8 +51,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -65,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

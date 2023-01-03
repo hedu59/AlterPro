@@ -41,3 +41,12 @@ C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Shared\obj\Debug\netcoreapp3.1\P
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.csproj.CoreCompileInputs.cache
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.dll
 C:\Projetos\Estudo\AlterPro\Prototype\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.pdb
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Shared\bin\Debug\netcoreapp3.1\Prototype.Shared.deps.json
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Shared\bin\Debug\netcoreapp3.1\Prototype.Shared.dll
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Shared\bin\Debug\netcoreapp3.1\Prototype.Shared.pdb
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.csprojAssemblyReference.cache
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.AssemblyInfoInputs.cache
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.AssemblyInfo.cs
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.csproj.CoreCompileInputs.cache
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.dll
+D:\ProjetosPessoais\MRVPrototype\Prototype\Prototype.Shared\obj\Debug\netcoreapp3.1\Prototype.Shared.pdb

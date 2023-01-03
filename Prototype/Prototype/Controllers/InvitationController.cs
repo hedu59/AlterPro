@@ -28,21 +28,32 @@ namespace Prototype.Api.Controllers
 
         [HttpGet]
         [AllowAnonymous]
+        [Route("GetAvailable")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Get(int? pageIndex, int? pageSize)
-       => Ok( await _invitationService.GetInvitationsPagedAsync(pageIndex?? 1, pageSize ?? 10));
+       => Ok( await _invitationService.GetInvitationsAvailablePagedAsync(pageIndex?? 1, pageSize ?? 10));
+
+
+        [HttpGet]
+        [Route("GetAceppted")]
+        [AllowAnonymous]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> GetAceppted(int? pageIndex, int? pageSize)
+       => Ok(await _invitationService.GetInvitationsAvailablePagedAsync(pageIndex ?? 1, pageSize ?? 10, true));
 
 
         [HttpPut]
         [AllowAnonymous]
+        [Route("UpdateInvitation")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> Put([FromBody] UpdateInvitationCommand command)
+        public async Task<IActionResult> UpdateInvitation(long invitationId, bool status)
         {
             try
             {
-                var result = await _mediator.Send(command);
+                var result = await _mediator.Send(new UpdateInvitationCommand { InvitationId = invitationId, Status = status });
 
                 if (result.Success) return Ok(result);
                 return BadRequest(result);
